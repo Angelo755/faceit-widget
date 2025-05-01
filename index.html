@@ -12,104 +12,7 @@
     <!-- Carregar o jQuery local -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     
-    <style>
-        /* Estilos para o widget */
-        .body *{
-            padding: 0;
-            margin: 0;
-            font-family: DM Sans, sans-serif;
-            color: #fff;
-        }
-
-        body {
-            flex: 1 0 auto;
-            min-height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: linear-gradient(0deg,#595959,#8d8d8d);
-            border-radius: 12px;
-            padding: 1px;
-            width: 390px;
-            position: relative;
-            margin: 0 auto;
-        }
-
-        .widget {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px;
-            border-radius: 12px;
-            background: #121212;
-            width: 100%;
-        }
-
-        .widget .level {
-            display: flex;
-            align-items: center;
-        }
-
-        .widget .level img {
-            width: 70px;
-            height: 70px;
-            margin-right: 12px;
-        }
-
-        .widget .level .elo p {
-            font-size: .85em;
-        }
-
-        .widget .matches {
-            text-align: center;
-        }
-
-        .widget .matches .stats {
-            display: flex;
-        }
-
-        .stat {
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #fff;
-            width: 54px;
-            height: 54px;
-            align-items: center;
-            justify-content: center;
-            font-size: 17px;
-            border-radius: 12px;
-            margin-left: 6px;
-        }
-
-        .stat p {
-            font-weight: 700;
-        }
-
-        .compact .widget .stat {
-            border-radius: 8px;
-            width: 30px;
-            height: 30px;
-        }
-
-        .compact .widget .stat p {
-            font-weight: 400;
-            font-size: .8em;
-        }
-
-        .compact .widget .matches small {
-            display: none;
-        }
-
-        .widget .matches small {
-            font-size: .6em;
-        }
-    </style>
+    
 </head>
 
 <body id="body">
@@ -148,7 +51,7 @@
         // Função para atualizar os dados de ELO
         function updateelo() {
             var oReq = new XMLHttpRequest();
-            oReq.open('GET', `https://api.faceit.com/stats/v2/players/${nickname}?game=csgo`, true);
+            oReq.open('GET', `https://api.faceit.com/stats/v2/players/Sk1llerss?game=csgo`, true);
             oReq.send();
 
             oReq.onload = function () {
